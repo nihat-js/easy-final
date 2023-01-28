@@ -13,61 +13,61 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export default function Index() {
 
-  const {wishList,setWishList}  = useContext(MainContext)
-  const [fullData , setFullData ] = useState([])
+  const { wishList, setWishList } = useContext(MainContext)
+  const [fullData, setFullData] = useState([])
 
   const URL = "http://localhost:4000/news"
 
-   function getAll(){
+  async function getAll() {
     let arr = []
-    wishList.forEach(x => {
-      axios.get(URL+ "/" + x.id).then((response)=>{
-        arr.push(response.data)
-      })
-    })
-    setFullData(arr)
+    for (let i = 0; i < wishList.length; i++) {
+      let response = await axios.get(URL + "/" + wishList[i].id)
+      arr.push(response.data)
+
+      console.log(arr)
+      setFullData(arr)
+    }
   }
-
-  function deleteFromWishList(id){
-    setWishList(  wishList.filter(x => x.id != id ))
-    getAll()
-  }
-
-
-  useEffect(()=>{
-    getAll()
-    console.log(wishList)
-  },[])
+    function deleteFromWishList(id) {
+      setWishList(wishList.filter(x => x.id != id))
+      getAll()
+    }
 
 
-  return (
-    <div className="wishlist-page">
-      <HelmetProvider>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Home Page</title>
-          <meta name="description" content="Home page" />
-        </Helmet>
-      </HelmetProvider>
-      <Nav />
-      <div className="row">
-        {fullData.map(x => <div className='box'> 
+    useEffect(() => {
+      getAll()
+    }, [])
+
+
+    return (
+      <div className="wishlist-page">
+        <Nav />
+        <HelmetProvider>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>Home Page</title>
+            <meta name="description" content="Home page" />
+          </Helmet>
+        </HelmetProvider>
+        <div className="row">
+
+          {fullData.map((item,index ) => <div className='box' key={index}> 
           <div className="img-wrap">
-            <img src={x.image} alt="" />
+            <img src={item.image} alt="" />
           </div>
-          <p className="title"> {x.title} </p>
-          <p className="date">  {x.date} </p>
+          <p className="title"> {item.title} </p>
+          <p className="date"> Added Date : {item.date} </p>
           <div className="actions">
-            <button className='' onClick={ () => deleteFromWishList(x._id)} > Delete </button>
-            <Link to={"/details/" + x._id} > See more   </Link>
+            <button className='delete' onClick={ () => deleteFromWishList(item._id)} > Remove from Wish List </button>
+            <Link to={"/details/" + item._id} > See more   </Link>
           </div>
         </div>   )}
-      </div>
+        </div>
 
-      <Footer />
-    </div>
-  )
-}
+        <Footer />
+      </div>
+    )
+  }

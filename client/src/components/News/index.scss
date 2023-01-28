@@ -6,6 +6,7 @@ section.news{
     margin:  30px auto;
     display: grid;
     grid-template-columns: 5fr 1fr;
+    align-items: center;
     gap: 30px ;
     .search{
       input {
@@ -13,6 +14,7 @@ section.news{
         padding: 20px 30px ;
         border: 2px solid #bbb;
         outline: none;
+        border-radius: 6px;
       }
     }
     .sort{
@@ -20,6 +22,9 @@ section.news{
         position: relative;
         .text{
           cursor: pointer;
+          background-color: teal;
+          padding: 13px 22px ;
+          color : #fff;
         }
         .content{
           position: absolute;

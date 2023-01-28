@@ -6,6 +6,11 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { MainContext } from '../../context/mainContext'
 import { useContext } from 'react'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export default function Index() {
 
   const [data, setData] = useState([])
@@ -25,12 +30,13 @@ export default function Index() {
 
 
   function toggleToWishList(id) {
-
+    toast.dismiss()
     if (wishList.findIndex(x => x.id == id) > -1) {
-     
-      setWishList( [...wishList.filter(x => x.id != id),]  )
-    } else  {
-      setWishList([...wishList,{id : id , date :Date.now()}])
+      toast("Removed from wishlist successfully")
+      setWishList([...wishList.filter(x => x.id != id),])
+    } else {
+      toast("Added to wishlist  successfully")
+      setWishList([...wishList, { id: id, date: Date.now() }])
     }
 
   }
@@ -70,14 +76,16 @@ export default function Index() {
 
 
   return (
+
     <section className="news">
+      <ToastContainer autoClose={1500} />
       <div className="filter">
         <div className="search">
           <input type="text" placeholder='Search By Name' value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
         </div>
         <div className="sort">
           <div className="title">
-            <p className="text" onClick={() => setToggleSortTitle(!toggleSortTitle)}> SortByTitle </p>
+            <p className="text" onClick={() => setToggleSortTitle(!toggleSortTitle)}> Sort By Title </p>
             <div className={`content  ${toggleSortTitle ? '' : 'd-none'}  `}>
               <h4 className={sortByTitle == 1 ? 'active' : ''} onClick={() => { handleSortByTitle(1); setToggleSortTitle(false) }} > A-Z   </h4>
               <h4 className={sortByTitle == -1 ? 'active' : ''} onClick={() => { handleSortByTitle(-1); setToggleSortTitle(false) }} > Z-A  </h4>
