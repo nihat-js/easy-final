@@ -25,6 +25,10 @@ section.shipment{
           background-color: #ff6600;
           color : #fff;
           border-radius: 50%;
+          &:hover{
+            background-color: #fff;
+            color : #191919
+          }
         }
       }
     }

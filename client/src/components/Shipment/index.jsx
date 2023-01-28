@@ -16,7 +16,7 @@ export default function Index() {
                 commodo, neque quam pharetra dolor, nec lacinia. </p>
             </div>
             <div className="right-column">
-              <button> &#60; </button>
+              <button> &#62; </button>
             </div>
           </div>
           <div className="box">
