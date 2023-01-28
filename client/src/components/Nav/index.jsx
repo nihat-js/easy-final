@@ -8,13 +8,14 @@ export default function Index() {
       <div className="row">
         <div className="left-column">
           <div className="brand">
-            <img src="https://preview.colorlib.com/theme/thelogistico/assets/img/logo/logo.png" alt="" />
-            <h3 className="text"> LOGISTICO  </h3>
+            {/* <img src="https://preview.colorlib.com/theme/thelogistico/assets/img/logo/logo.png" alt="" width={"25px"} /> */}
+            <h3 className="text">  <Link to ='/'> Logistico </Link>   </h3>
           </div>
           <div className="links">
             <ul>
               <li> <Link to='/'> Home </Link> </li>
               <li> <Link to='/add'> Add </Link> </li>
+              <li> <Link to='/wishlist'> Wishlist </Link> </li>
               <li> <Link to='/'> About </Link> </li>
               <li> <Link to='/'> Service </Link> </li>
               <li> <Link to='/'> Blog </Link> </li>
@@ -30,7 +31,6 @@ export default function Index() {
           </div>
           <div className="phone">
             <p className="text"> 10 (87) 237  3784  </p>
-            <i className="fa-solid fa-music"></i>
           </div>
         </div>
       </div>

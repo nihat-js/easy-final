@@ -1,0 +1,82 @@
+section.home-hero{
+  height: 600px;
+  background: url("https://preview.colorlib.com/theme/thelogistico/assets/img/hero/h1_hero1.jpg.webp");
+  color : #fff;
+  .container{    
+    .row {
+      height: 600px;
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      gap: 50px;
+      align-items: center;
+      .left-column{
+        .subtitle{
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+        .title {
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        .text{
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        button{
+          background-color: #ff6600;
+          color : #fff;
+          padding: 20px 30px;
+          border: none;
+          transform: .3s all ;
+          box-shadow:  0 0 #fff;
+          &:hover{
+            box-shadow: inset 400px 0 0 #fff;
+            color : #191919;
+          }
+        }
+      }
+      .right-column{
+        padding: 30px 20px;
+        background-color: #fff;
+        color : #000;
+        .title{
+          text-align: center;
+        }
+        .text{
+          text-align: center;
+          color : #777;
+          margin-bottom: 25px;
+        }
+        .select-group{
+          margin-bottom: 15px;
+          .text{
+            text-align: left;
+          }
+          select{
+            width: 100%;
+            padding: 10px 15px ;
+          }
+        }
+        .input-group{
+          margin-bottom: 15px;
+          .text{
+            text-align: left;
+          }
+          input{
+            width: 100%;
+            padding: 10px 15px ;
+            border: 1px solid #ddd;
+            outline: none;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  .row {
+    grid-template-columns: 1fr  !important;
+  }
+}

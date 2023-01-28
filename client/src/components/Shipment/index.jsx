@@ -13,10 +13,21 @@ export default function Index() {
               <p className="number"> 01  </p>
               <h3 className="title"> Logistic Solution </h3>
               <p className="text"> Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis
-commodo, neque quam pharetra dolor, nec lacinia. </p>
+                commodo, neque quam pharetra dolor, nec lacinia. </p>
             </div>
             <div className="right-column">
               <button> &#60; </button>
+            </div>
+          </div>
+          <div className="box">
+            <div className="left-column">
+              <p className="number"> 01  </p>
+              <h3 className="title"> Logistic Solution </h3>
+              <p className="text"> Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis
+                commodo, neque quam pharetra dolor, nec lacinia. </p>
+            </div>
+            <div className="right-column">
+              <button> &#62; </button>
             </div>
           </div>
         </div>

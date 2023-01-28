@@ -1,0 +1,41 @@
+section.mission{
+    .row {
+      max-width: 1400px;
+      margin:  0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .left-column{
+        .title{
+          margin-bottom: 15px;
+        }
+        .text{
+          font-size: 24px;
+          letter-spacing: 1px;
+          margin-bottom: 30px;
+        }
+        button{
+          padding: 15px 20px ;
+          border : 2px solid #ff6600;
+          background: #fff;
+          &:hover{
+            background: #ff6600;
+            color : #fff;
+          }
+        }
+      }
+      .right-column{
+        img {
+          width: 100%;
+        }
+      }
+    }
+}
+
+@media screen and (max-width:768px) {
+  section.mission{
+    .row {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+}

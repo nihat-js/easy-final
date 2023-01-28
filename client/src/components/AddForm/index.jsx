@@ -1,9 +1,10 @@
 import { Formik, Form, Field  ,ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-
+import axios from 'axios'
 
 import './index.scss'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const schema = Yup.object().shape({
   title: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
@@ -13,13 +14,21 @@ const schema = Yup.object().shape({
 });
 export default function Index() {
 
-  async function add (){
+  const URL = "http://localhost:4000/news"
+
+  async function add (values){
+    toast.dismiss()
+    toast("Please wait")
+    let response = await axios.post(URL,values)
+    toast.dismiss()
+    toast(`News  "${values.title} " added successfully `)
 
   }
 
 
   return (
     <section className="add">
+       <ToastContainer />
       <div className="container">
         <Formik
           initialValues={{
