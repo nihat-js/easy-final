@@ -15,7 +15,13 @@ nav{
       .links {
         ul {
           display: inline-flex ;
+          align-items: center;
           gap: 15px;
+          padding:  0 20px;
+          li:hover{
+            background-color: #ff6600;
+            color : #fff;
+          }
         }
       }
     }
