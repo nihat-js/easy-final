@@ -8,7 +8,6 @@ export default function Index() {
       <div className="row">
         <div className="left-column">
           <div className="brand">
-            {/* <img src="https://preview.colorlib.com/theme/thelogistico/assets/img/logo/logo.png" alt="" width={"25px"} /> */}
             <h3 className="text">  <Link to ='/'> Logistico </Link>   </h3>
           </div>
           <div className="links">

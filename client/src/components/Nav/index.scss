@@ -8,16 +8,24 @@ nav{
     align-items: center;
     .left-column{
       display: flex;
+      align-items: center;
       .brand{
         display: flex;
         margin-right: 15px;
+        background-color: #000;
+        color : #fff;
+        padding: 10px 15px;
       }
       .links {
         ul {
           display: inline-flex ;
           align-items: center;
-          gap: 15px;
+          // gap: 15px;
           padding:  0 20px;
+          li{
+
+            padding: 10px 15px;
+          }
           li:hover{
             background-color: #ff6600;
             color : #fff;
