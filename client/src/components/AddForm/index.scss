@@ -8,13 +8,31 @@ section.add{
       .input-group{
         input{
           width: 100%;
-          border:1px solid #ededed;
+          border:1px solid #dcdecd;
           border-radius: 6px;
           padding: 10px 15px ;
           margin-bottom: 15px;
           outline: none;
         }
       }
+      button {
+        margin-top: 20px;
+        padding: 15px 25px;
+        background-color: teal;
+        color : #fff;
+        border: none;
+        &:hover{
+          background: linear-gradient(to right, teal 0% , teal 50% , #191919 50% , #191919 100% );
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  section.add{
+    form {
+      padding: 0 1rem;
     }
   }
 }
