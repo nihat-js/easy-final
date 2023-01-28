@@ -51,7 +51,7 @@ export default function Index() {
             </div>
             <div className="right-column">
               <h3 className="title"> {data.title} </h3>
-              <p className="date"> {data.date} </p>
+              <p className="date"> Date  :  {data.date} </p>
 
             </div>
           </div>

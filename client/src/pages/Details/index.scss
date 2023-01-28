@@ -1,8 +1,25 @@
 section.detail{
   .container{
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap : 20px;
+    }
     .title{
-      margin-bottom: 25px;
+      margin-bottom: 10px;
+    }
+    .date {
+      color : #999;
+    }
+  }
+}
 
+@media screen and (max-width:768px) {
+  section.detail{
+    .container{
+      .row {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
