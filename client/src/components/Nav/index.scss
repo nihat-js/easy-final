@@ -15,6 +15,9 @@ nav{
         background-color: #000;
         color : #fff;
         padding: 10px 15px;
+        &:hover{
+          background-color: #ff6600;
+        }
       }
       .links {
         ul {
