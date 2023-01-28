@@ -35,6 +35,11 @@ section.shipment{
   section.shipment{
     .row {
       grid-template-columns: 1fr !important ;
+      .right-column{
+        .title{
+          text-align: center;
+        }
+      }
     }
   }
 }

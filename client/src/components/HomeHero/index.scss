@@ -23,6 +23,7 @@ section.home-hero{
           margin-bottom: 20px;
         }
         button{
+          margin-left: 20px;
           background-color: #ff6600;
           color : #fff;
           padding: 20px 30px;
@@ -78,5 +79,17 @@ section.home-hero{
 @media screen and (max-width:768px){
   .row {
     grid-template-columns: 1fr  !important;
+    .left-column{
+      padding: 30px 10px ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title{
+        text-align: center;
+      }
+      .text{
+        text-align: center;
+      }
+    }
   }
 }

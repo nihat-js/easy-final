@@ -106,7 +106,7 @@ export default function Index() {
               <div className="actions">
                 <Link to={"/details/" + item._id} > Details </Link>
                 <button className='delete' onClick={() => deleteById(item._id)} > Delete </button>
-                <i onClick={() => toggleToWishList(item._id)} class={wishList.findIndex(x => x.id == item._id) > -1 ? "fa-solid fa-heart" : "fa-regular fa-heart"} ></i>
+                <i onClick={() => toggleToWishList(item._id)} className={wishList.findIndex(x => x.id == item._id) > -1 ? "fa-solid fa-heart" : "fa-regular fa-heart"} ></i>
               </div>
             </div>)}
           </div>

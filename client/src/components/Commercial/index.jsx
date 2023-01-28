@@ -28,7 +28,7 @@ export default function Index() {
   return (
     <section className="commercial">
       <div className="row">
-        {data.map(x => <Box data={x} />  )}
+        {data.map( (item,index) => <Box key={index} data={item} />  )}
       </div>
     </section>
   )
