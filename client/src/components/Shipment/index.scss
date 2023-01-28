@@ -1,0 +1,18 @@
+section.shipment{
+  .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    .right-column{
+      background-color: #000;
+      color : #fff;
+      .title{
+        font-size: 45px;
+        .box {
+          border : 1px solid #000;
+          padding: 20px 30px ;
+          display:flex
+        }
+      }
+    }
+  }
+}

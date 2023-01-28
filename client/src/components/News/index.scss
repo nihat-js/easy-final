@@ -1,0 +1,21 @@
+section.news{
+  text-align: center;
+  .spinner{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #213374;
+    border-top : none;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    .box{
+      .img-wrap{
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
